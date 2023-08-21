@@ -1,0 +1,19 @@
+{
+  "name": "ah-tree-helper",
+  "version": "2.0.5",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "ci": "prettier --check src && tsc -p tsconfig.json --noEmit",
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run ci && npm run build",
+    "release": "npm run ci && release-it"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.3",
+    "prettier": "^3.0.2",
+    "release-it": "^16.1.5"
+  }
+}
